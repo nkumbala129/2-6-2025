@@ -110,14 +110,15 @@ st.markdown("""
     position: fixed;
     top: 0;
     left: 0;
-    right: 300px; /* Adjusted to account for sidebar width (~300px) */
+    right: 160px; /* Adjusted to account for logo width (150px) + padding (10px) */
     z-index: 999;
     background-color: #ffffff;
-    padding: 10px 20px; /* Added horizontal padding */
-    text-align: center;
+    padding: 10px 20px; /* Adjusted padding */
+    padding-right: 20px; /* Space between text and logo */
+    text-align: right; /* Align content to the right */
     pointer-events: none; /* Disable hover interactions */
     box-sizing: border-box; /* Include padding in width */
-    max-width: calc(100% - 300px); /* Prevent overlap with sidebar */
+    max-width: calc(100% - 460px); /* Account for sidebar (~300px) and logo (~160px) */
 }
 .fixed-header a {
     pointer-events: none !important;
@@ -128,13 +129,13 @@ st.markdown("""
 .fixed-header h1, .fixed-header p {
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words break */
-    margin: 0 auto; /* Center content */
+    margin: 0; /* Remove default margins */
     max-width: 100%; /* Constrain text width */
 }
 .stApp {
-    padding-top: 120px; /* Increased to ensure chat content starts below header */
-    padding-left: 20px; /* Added to prevent overlap with sidebar */
-    padding-right: 20px; /* Added for balanced spacing */
+    padding-top: 120px; /* Ensure chat content starts below header */
+    padding-left: 20px; /* Prevent overlap with sidebar */
+    padding-right: 20px; /* Balanced spacing */
 }
 </style>
 """, unsafe_allow_html=True)
