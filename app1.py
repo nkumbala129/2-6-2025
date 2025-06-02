@@ -610,8 +610,8 @@ else:
                 <style>
                 .centered-header {
                     position: fixed;
-                    top: 50%;
-                    left: 50%;
+                    top: 10%;
+                    left: 25%;
                     transform: translate(-50%, -50%);
                     z-index: 999;
                     background-color: #ffffff;
