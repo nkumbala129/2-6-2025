@@ -604,38 +604,16 @@ else:
             )
 
     # --- Main UI and Query Processing ---
-        with st.container():
-            st.markdown(
-                """
-                <style>
-                .centered-header {
-                    position: fixed;
-                    top: 5%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: 999;
-                    background-color: #ffffff;
-                    padding: 20px;
-                    text-align: auto;
-                    pointer-events: none; /* Disable hover interactions */
-                }
-                .centered-header a {
-                    pointer-events: none !important;
-                    text-decoration: none !important;
-                    color: inherit !important;
-                    cursor: default !important;
-                }
-                .stApp {
-                    padding-top: 0px; /* Remove top padding to avoid unnecessary space */
-                }
-                </style>
-                <div class="centered-header">
-                    <h1 style='color: #29B5E8; margin-bottom: 5px;'><span style='pointer-events: none; text-decoration: none;'>Cortex AI-Procurement Assistant by DiLytics</span></h1>
-                    <p style='font-size: 16px; color: #333;'><strong><span style='pointer-events: none; text-decoration: none;'>Welcome to Cortex AI. I am here to help with Dilytics Procurement Insights Solutions</span></strong></p>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+    with st.container():
+        st.markdown(
+            """
+            <div class="fixed-header">
+                <h1 style='color: #29B5E8; margin-bottom: 5px;'><span style='pointer-events: none; text-decoration: none;'>Cortex AI-Procurement Assistant by DiLytics</span></h1>
+                <p style='font-size: 16px; color: #333;'><strong><span style='pointer-events: none; text-decoration: none;'>Welcome to Cortex AI. I am here to help with Dilytics Procurement Insights Solutions</span></strong></p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     semantic_model_filename = SEMANTIC_MODEL.split("/")[-1]
     init_service_metadata()
 
