@@ -110,12 +110,14 @@ st.markdown("""
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: 300px; /* Adjusted to account for sidebar width (~300px) */
     z-index: 999;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 10px 20px; /* Added horizontal padding */
     text-align: center;
     pointer-events: none; /* Disable hover interactions */
+    box-sizing: border-box; /* Include padding in width */
+    max-width: calc(100% - 300px); /* Prevent overlap with sidebar */
 }
 .fixed-header a {
     pointer-events: none !important;
@@ -123,8 +125,16 @@ st.markdown("""
     color: inherit !important;
     cursor: default !important;
 }
+.fixed-header h1, .fixed-header p {
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break */
+    margin: 0 auto; /* Center content */
+    max-width: 100%; /* Constrain text width */
+}
 .stApp {
-    padding-top: 100px;
+    padding-top: 120px; /* Increased to ensure chat content starts below header */
+    padding-left: 20px; /* Added to prevent overlap with sidebar */
+    padding-right: 20px; /* Added for balanced spacing */
 }
 </style>
 """, unsafe_allow_html=True)
