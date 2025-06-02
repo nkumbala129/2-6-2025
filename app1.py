@@ -616,7 +616,7 @@ else:
                     z-index: 999;
                     background-color: #ffffff;
                     padding: 20px;
-                    text-align: center;
+                    text-align: auto;
                     pointer-events: none; /* Disable hover interactions */
                 }
                 .centered-header a {
